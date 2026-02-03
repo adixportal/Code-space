@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8" />
   <title>CodeSpace GOD</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="topbar">
+    <select id="language">
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+      <option value="cpp">C++</option>
+      <option value="java">Java</option>
+      <option value="html">HTML</option>
+    </select>
+  </div>
 
-<select id="language">
-  <option value="python">Python</option>
-  <option value="javascript">JavaScript</option>
-  <option value="cpp">C++</option>
-  <option value="java">Java</option>
-  <option value="html">HTML</option>
-</select>
+  <div id="editor"></div>
 
-<div id="editor"></div>
-
-<script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
-<script src="main.js"></script>
-
+  <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
