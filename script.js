@@ -5,17 +5,18 @@ require.config({
 });
 
 require(["vs/editor/editor.main"], function () {
-  let editor = monaco.editor.create(
+  const editor = monaco.editor.create(
     document.getElementById("editor"),
     {
-      value: "// Welcome to GOD Mode\n",
-      language: "javascript",
+      value: "# Welcome to CodeSpace GOD\nprint('Hello World')",
+      language: "python",
       theme: "vs-dark",
-      automaticLayout: true
+      automaticLayout: true,
+      fontSize: 14
     }
   );
 
-  document.getElementById("language").addEventListener("change", e => {
+  document.getElementById("language").addEventListener("change", (e) => {
     monaco.editor.setModelLanguage(
       editor.getModel(),
       e.target.value
